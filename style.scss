@@ -1,0 +1,242 @@
+@import 'delovi/variables';
+@import 'delovi/base';
+@import 'delovi/mixins';
+
+
+// LOGO I NAVIGACIJA
+header{
+    background-color: $darkblue-color;
+    .container{
+        width: 80%;
+        margin: auto;
+        max-width: 1200px;
+        height: 5vh;
+        @include flex(space-between, center);
+            div{
+                @include flex(space-between,center);
+                gap: 0.4rem;
+                p{
+                    text-transform: uppercase;
+                    color: yellow;
+                    font-size: 1.2rem;
+                    font-weight: 400;
+                    padding-top: 0.1rem;
+                }
+                i{
+                    font-size: 1.1rem;
+                    color: yellow;
+                }
+            }
+            ul{
+                @include flex(space-between, center);
+                list-style: none;
+                gap: 0.5rem;
+                color: $white-color;
+            }  
+    }
+    nav {
+        background-color: $white-color;
+        height: 4vh;
+        @include flex(center, center);
+        .burgerMeni {
+            display: none;
+            @include responsive(miniMobilni) {
+                display: block;
+            }
+        }
+        ul{
+            @include flex(center, center);
+            list-style: none;
+            gap: 1rem;
+            @include responsive(miniMobilni){
+                @include flex(center, center, column);
+                background-color: white;
+                padding: 1rem;
+                display: none;
+            }
+            li{
+                font-size: 1rem;
+                text-transform: capitalize;
+                color: $litegreen-color;
+            }
+        }
+    }
+}
+
+// Sekcija 1
+
+.iznajmi{
+    background-image: url(img/header.jpg);
+    height: 70vh;
+    @include flex(center, center);
+    div{
+        background-color: $litegreen-colorwithopacity;
+        padding: 1.5rem 3rem;
+        color: white;
+        font-weight: 700;
+        @include responsive(miniMobilni) {
+            height: 50vh;
+            width: 90vw;
+            font-size: 2rem;
+            @include flex(center, center, column);
+            
+        }
+        p{
+            padding: 0.6rem 0 1.3rem;
+            font-weight: 200;
+            font-size: 0.8rem;
+            @include responsive(miniMobilni) {
+                font-size: 1.8rem;
+            }
+        }
+        a {
+            background-color: $darkyellow-color;
+            padding: 0.3rem 1rem;
+            text-transform: uppercase;
+            font-size: 0.6rem;
+            font-weight: 700;
+            text-decoration: none;
+            color: $black-color;
+            @include responsive(miniMobilni) {
+                font-size: 1.2rem;
+                padding: 0.7rem 2rem;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+// SEKCIJA 2
+
+
+
+.oNama{
+    background-image: url(img/onama.jpg);
+    background-position: center bottom;
+    div{
+        background-color: $litegreen-colorwithopacity;
+        @include flex(center,center, column);
+        height: 40vh;
+        padding: 0 10%;
+        gap: 5%;
+        color: $white-color;
+        p {
+            font-size: 0.7rem;
+        }
+    }
+}
+
+// SEKCIJA 2 
+
+.enterijer{
+    @include flex(center, center);
+    div{
+        flex: 0 0 25%;
+        @include responsive(mobilni){
+            flex: 0 0 50%;
+        }
+        @include responsive(miniMobilni){
+            flex: 0 0 100%;
+        }
+        color: white;
+        .green{
+            background-color: $litegreen-color;
+        }
+        .blue{
+            background-color: $darkblue-color;
+        }
+        h5 {
+            padding: 1rem 3rem;
+            text-transform: capitalize;
+            border-top: 0.4rem solid $darkyellow-color;
+        }
+        img {
+            display: block;
+        }
+    }
+}
+.lokacije{
+    @include flex(center, center);
+    div{
+        flex: 0 0 50%;
+        @include responsive(tablet) {
+            flex: 0 0 100%;
+            &:nth-child(1){
+                order: 1;
+            }
+            &:nth-child(3){
+                order: 2;
+            }
+            &:nth-child(4){
+                order: 3;
+            }
+        }
+        h2{
+            color: $litegreen-color;
+            font-weight: 800;
+            @include responsive(tablet) {
+                margin-top: 1rem;
+            }
+        }
+        p{
+            text-align: justify;
+            padding: 1rem 2rem;
+        }
+        img {
+            display: block;
+        }
+    }
+}
+
+// Footer 
+
+footer{
+    background-image: url(img/footer.jpg);
+    div{
+        height: 45vh;
+        background-color: $darkyellow-colorwithopacity;
+        @include flex(center, stretch ,column);
+        h2 {
+            @include responsive(mobilni) {
+                font-size: 2.8rem;
+                font-weight: 900;
+            }
+            @include responsive(miniMobilni) {
+                font-size: 1.8rem;
+            }
+        }
+        p{
+            padding: 0.6rem 0 1.1rem;
+            @include responsive(mobilni){
+                font-size: 1.5rem;
+            }
+            @include responsive(miniMobilni) {
+                font-size: 0.9rem;
+            }
+        }
+        form{
+            @include responsive(mobilni) {
+                @include flex(center, center, column);
+            }
+            input{
+                @include responsive(mobilni) {
+                    margin: 0.3rem;
+                    width: 90%;
+                }
+                text-align: left;
+                padding: 1rem 0.7rem;
+                border: none;
+            }
+            input[type='submit']{
+                background-color: $litegreen-color;
+                color: $white-color;
+                text-transform: uppercase;
+                padding: 1rem 2.8rem;
+                @include responsive(mobilni) {
+                    text-align: center;
+                }
+            }
+         
+}
+}
+}

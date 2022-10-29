@@ -1,0 +1,320 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+img {
+  width: 100%;
+}
+
+header {
+  background-color: rgb(59, 80, 98);
+}
+header .container {
+  width: 80%;
+  margin: auto;
+  max-width: 1200px;
+  height: 5vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+header .container div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+header .container div p {
+  text-transform: uppercase;
+  color: yellow;
+  font-size: 1.2rem;
+  font-weight: 400;
+  padding-top: 0.1rem;
+}
+header .container div i {
+  font-size: 1.1rem;
+  color: yellow;
+}
+header .container ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 0.5rem;
+  color: white;
+}
+header nav {
+  background-color: white;
+  height: 4vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+header nav .burgerMeni {
+  display: none;
+}
+@media screen and (max-width: 500px) {
+  header nav .burgerMeni {
+    display: block;
+  }
+}
+header nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 1rem;
+}
+@media screen and (max-width: 500px) {
+  header nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: white;
+    padding: 1rem;
+    display: none;
+  }
+}
+header nav ul li {
+  font-size: 1rem;
+  text-transform: capitalize;
+  color: rgb(50, 183, 118);
+}
+
+.iznajmi {
+  background-image: url(img/header.jpg);
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.iznajmi div {
+  background-color: rgba(52, 153, 108, 0.75);
+  padding: 1.5rem 3rem;
+  color: white;
+  font-weight: 700;
+}
+@media screen and (max-width: 500px) {
+  .iznajmi div {
+    height: 50vh;
+    width: 90vw;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+.iznajmi div p {
+  padding: 0.6rem 0 1.3rem;
+  font-weight: 200;
+  font-size: 0.8rem;
+}
+@media screen and (max-width: 500px) {
+  .iznajmi div p {
+    font-size: 1.8rem;
+  }
+}
+.iznajmi div a {
+  background-color: rgb(243, 203, 49);
+  padding: 0.3rem 1rem;
+  text-transform: uppercase;
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: #000;
+}
+@media screen and (max-width: 500px) {
+  .iznajmi div a {
+    font-size: 1.2rem;
+    padding: 0.7rem 2rem;
+    font-weight: 600;
+  }
+}
+
+.oNama {
+  background-image: url(img/onama.jpg);
+  background-position: center bottom;
+}
+.oNama div {
+  background-color: rgba(52, 153, 108, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 40vh;
+  padding: 0 10%;
+  gap: 5%;
+  color: white;
+}
+.oNama div p {
+  font-size: 0.7rem;
+}
+
+.enterijer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.enterijer div {
+  flex: 0 0 25%;
+  color: white;
+}
+@media screen and (max-width: 768px) {
+  .enterijer div {
+    flex: 0 0 50%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .enterijer div {
+    flex: 0 0 100%;
+  }
+}
+.enterijer div .green {
+  background-color: rgb(50, 183, 118);
+}
+.enterijer div .blue {
+  background-color: rgb(59, 80, 98);
+}
+.enterijer div h5 {
+  padding: 1rem 3rem;
+  text-transform: capitalize;
+  border-top: 0.4rem solid rgb(243, 203, 49);
+}
+.enterijer div img {
+  display: block;
+}
+
+.lokacije {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.lokacije div {
+  flex: 0 0 50%;
+}
+@media screen and (max-width: 1030px) {
+  .lokacije div {
+    flex: 0 0 100%;
+  }
+  .lokacije div:nth-child(1) {
+    order: 1;
+  }
+  .lokacije div:nth-child(3) {
+    order: 2;
+  }
+  .lokacije div:nth-child(4) {
+    order: 3;
+  }
+}
+.lokacije div h2 {
+  color: rgb(50, 183, 118);
+  font-weight: 800;
+}
+@media screen and (max-width: 1030px) {
+  .lokacije div h2 {
+    margin-top: 1rem;
+  }
+}
+.lokacije div p {
+  text-align: justify;
+  padding: 1rem 2rem;
+}
+.lokacije div img {
+  display: block;
+}
+
+footer {
+  background-image: url(img/footer.jpg);
+}
+footer div {
+  height: 45vh;
+  background-color: rgba(243, 203, 49, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 768px) {
+  footer div h2 {
+    font-size: 2.8rem;
+    font-weight: 900;
+  }
+}
+@media screen and (max-width: 500px) {
+  footer div h2 {
+    font-size: 1.8rem;
+  }
+}
+footer div p {
+  padding: 0.6rem 0 1.1rem;
+}
+@media screen and (max-width: 768px) {
+  footer div p {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  footer div p {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  footer div form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+footer div form input {
+  text-align: left;
+  padding: 1rem 0.7rem;
+  border: none;
+}
+@media screen and (max-width: 768px) {
+  footer div form input {
+    margin: 0.3rem;
+    width: 90%;
+  }
+}
+footer div form input[type=submit] {
+  background-color: rgb(50, 183, 118);
+  color: white;
+  text-transform: uppercase;
+  padding: 1rem 2.8rem;
+}
+@media screen and (max-width: 768px) {
+  footer div form input[type=submit] {
+    text-align: center;
+  }
+}/*# sourceMappingURL=style.css.map */
